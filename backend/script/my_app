@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+use MyApp;
+
+# Start the Mojolicious app on port 3000 and bind to 0.0.0.0
+MyApp->new->start('daemon', '-l', 'http://0.0.0.0:3000');
+
+

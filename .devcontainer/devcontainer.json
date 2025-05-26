@@ -1,0 +1,18 @@
+{
+  "name": "Mojolicious + Quasar",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/perl:1": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [3000, 9000],
+  "postCreateCommand": "curl -L https://cpanmin.us | perl - --local-lib=~/perl5 local::lib && echo 'eval \"\\$(perl -I ~/perl5/lib/perl5 -Mlocal::lib)\"' >> ~/.bashrc && source ~/.bashrc && cpanm Mojolicious && cd frontend && npm install",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
+}
+

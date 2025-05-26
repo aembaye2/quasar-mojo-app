@@ -1,0 +1,30 @@
+# Perl build and local install files
+*.o
+*.bs
+*.so
+*.pm.tdy
+*.bak
+*.swp
+*.swo
+
+# Local Perl lib directory (from local::lib)
+perl5/
+local/
+blib/
+_build/
+
+# cpanm build artifacts
+.cpanm/
+
+# Mojolicious generated logs, temp, etc.
+log/
+tmp/
+mojo.sock
+
+# Editor/IDE
+*.DS_Store
+*.vscode/
+*.idea/
+
+# Backup files
+*~
